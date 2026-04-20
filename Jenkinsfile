@@ -5,7 +5,7 @@ pipeline {
 
           stage('Checkout') {
             steps {
-                dir('terraform') {
+                dir('AnsibleDemo') {
                     git branch: 'main', url: 'https://github.com/Urmilaa/Jenkins-Ansible-Integration'
                 }
             }
