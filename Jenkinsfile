@@ -11,22 +11,7 @@ pipeline {
             }
         }
 
-         stage('Configure Jenkins SSH') {
-            steps {
-                sh '''
-                sudo mkdir -p /var/lib/jenkins/.ssh
-
-                sudo cp /home/ubuntu/.ssh/known_hosts /var/lib/jenkins/.ssh/
-
-                sudo chown -R jenkins:jenkins /var/lib/jenkins/.ssh
-
-                sudo chmod 700 /var/lib/jenkins/.ssh
-
-                sudo chmod 600 /var/lib/jenkins/.ssh/known_hosts
-                '''
-            }
-        }
-
+        
         stage('Execute playbook') {           
             steps {          
                 ansiblePlaybook(
