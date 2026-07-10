@@ -17,7 +17,7 @@ pipeline {
                     credentialsId: 'JenkinAnsible',
                     disableHostKeyChecking: false,
                     installation: 'Ansible',
-                    inventory: "${WORKSPACE}/AnsibleDemo/Inventory2.yaml",
+                    inventory: "${WORKSPACE}/AnsibleDemo/Inventory.yaml",
                     playbook: "${WORKSPACE}/AnsibleDemo/Multi-play-delete.yaml",
                     vaultTmpPath: ''
                 )
