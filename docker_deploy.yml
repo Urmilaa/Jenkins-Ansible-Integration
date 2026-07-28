@@ -10,26 +10,23 @@
         state: present
         update_cache: yes
 
-    - name: Start Docker
+    - name: Start Docker service
       service:
         name: docker
         state: started
         enabled: yes
 
     - name: Pull latest Docker image
-      docker_image:
-        name: urmidevops/nginx-webpage
-        source: pull
-        tag: latest
+      shell: docker pull urmidevops/nginx-webpage:latest
 
-    - name: Stop existing container
-      ignore_errors: yes
+    - name: Remove existing container
       shell: docker rm -f nginx-webpage
+      ignore_errors: yes
 
     - name: Run Docker container
       shell: |
         docker run -d \
-        --name nginx-webpage \
-        -p 80:80 \
-        --restart always \
-        urmidevops/nginx-webpage:latest
+          --name nginx-webpage \
+          --restart always \
+          -p 80:80 \
+          urmidevops/nginx-webpage:latest
