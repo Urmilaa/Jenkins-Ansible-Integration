@@ -1,8 +1,8 @@
 FROM nginx:latest
 
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY images/ /usr/share/nginx/html/images/
+COPY Webpage/Index.html /usr/share/nginx/html/
+COPY Webpage/style.css /usr/share/nginx/html/
+COPY Webpage/CI-CD.png /usr/share/nginx/html/images/
 
 EXPOSE 80
 
