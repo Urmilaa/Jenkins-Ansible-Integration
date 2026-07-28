@@ -1,118 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps CI/CD Pipeline</title>
+    <title>DevOps CI/CD Pipeline Deployment</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h1>🚀 DevOps CI/CD Pipeline Deployment Successful</h1>
+        <header>
+            <h1>🚀 DevOps CI/CD Pipeline Deployment Successful</h1>
 
-    <p class="subtitle">
-        End-to-End Automated Deployment using Jenkins, Docker,
-        Docker Hub, Ansible and AWS EC2
-    </p>
+            <p class="subtitle">
+                End-to-End Automated Deployment using
+                <strong>GitHub</strong>,
+                <strong>Jenkins</strong>,
+                <strong>Docker</strong>,
+                <strong>Docker Hub</strong>,
+                <strong>Ansible</strong> and
+                <strong>AWS EC2</strong>
+            </p>
+        </header>
 
-    <div class="logos">
+        <!-- Pipeline Diagram -->
+        <div class="pipeline-image">
 
-        <div class="tool">
-            <img src="images/github.png">
-            <h4>GitHub</h4>
+            <img src="images/CI-CD.png"
+                 alt="DevOps CI/CD Pipeline"
+                 class="diagram">
+
         </div>
 
-        <div class="arrow">➜</div>
+        <!-- Deployment Summary -->
+        <section class="summary">
 
-        <div class="tool">
-            <img src="images/jenkins.png">
-            <h4>Jenkins</h4>
-        </div>
+            <h2>Deployment Summary</h2>
 
-        <div class="arrow">➜</div>
+            <table>
 
-        <div class="tool">
-            <img src="images/docker.png">
-            <h4>Docker</h4>
-        </div>
+                <tr>
+                    <th>Application</th>
+                    <td>Static HTML Website</td>
+                </tr>
 
-        <div class="arrow">➜</div>
+                <tr>
+                    <th>Web Server</th>
+                    <td>Nginx Docker Container</td>
+                </tr>
 
-        <div class="tool">
-            <img src="images/dockerhub.png">
-            <h4>Docker Hub</h4>
-        </div>
+                <tr>
+                    <th>CI Tool</th>
+                    <td>Jenkins</td>
+                </tr>
 
-        <div class="arrow">➜</div>
+                <tr>
+                    <th>Container Platform</th>
+                    <td>Docker</td>
+                </tr>
 
-        <div class="tool">
-            <img src="images/ansible.png">
-            <h4>Ansible</h4>
-        </div>
+                <tr>
+                    <th>Image Registry</th>
+                    <td>Docker Hub</td>
+                </tr>
 
-        <div class="arrow">➜</div>
+                <tr>
+                    <th>Deployment Tool</th>
+                    <td>Ansible</td>
+                </tr>
 
-        <div class="tool">
-            <img src="images/aws.png">
-            <h4>AWS EC2</h4>
-        </div>
+                <tr>
+                    <th>Infrastructure</th>
+                    <td>AWS EC2 (2 Instances)</td>
+                </tr>
+
+                <tr>
+                    <th>Pipeline Status</th>
+                    <td style="color:green;font-weight:bold;">
+                        ✅ Deployment Successful
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+
+            <h2>Pipeline Features</h2>
+
+            <div class="feature-grid">
+
+                <div class="card">
+                    <h3>⚙️ Automation</h3>
+                    <p>
+                        Complete CI/CD automation using Jenkins and Ansible.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🐳 Containerization</h3>
+                    <p>
+                        Docker packages the application for consistent deployments.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>☁️ Cloud Deployment</h3>
+                    <p>
+                        Application deployed automatically on two AWS EC2 instances.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Fast Delivery</h3>
+                    <p>
+                        Source code changes are automatically built and deployed.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🔒 Reliable</h3>
+                    <p>
+                        Repeatable deployments with minimal manual intervention.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📦 Docker Hub</h3>
+                    <p>
+                        Images are versioned and distributed through Docker Hub.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <footer>
+
+            <p>
+                🚀 Built with Jenkins • Docker • Docker Hub • Ansible • AWS EC2
+            </p>
+
+        </footer>
 
     </div>
-
-    <div class="card">
-
-        <h2>Deployment Summary</h2>
-
-        <table>
-
-            <tr>
-                <td>Application</td>
-                <td>Static HTML Website</td>
-            </tr>
-
-            <tr>
-                <td>Container</td>
-                <td>Nginx Docker Container</td>
-            </tr>
-
-            <tr>
-                <td>Image Registry</td>
-                <td>Docker Hub</td>
-            </tr>
-
-            <tr>
-                <td>Deployment</td>
-                <td>Automated via Ansible</td>
-            </tr>
-
-            <tr>
-                <td>Target Servers</td>
-                <td>2 AWS EC2 Instances</td>
-            </tr>
-
-            <tr>
-                <td>Pipeline Status</td>
-                <td class="success">SUCCESS ✅</td>
-            </tr>
-
-        </table>
-
-    </div>
-
-    <div class="footer">
-
-        <img src="images/nginx.png">
-
-        <p>
-            Running inside an Nginx Docker Container
-        </p>
-
-    </div>
-
-</div>
 
 </body>
+
 </html>
