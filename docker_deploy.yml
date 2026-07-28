@@ -18,18 +18,18 @@
 
     - name: Pull latest Docker image
       docker_image:
-        name: yourdockerhubusername/nginx-demo
+        name: urmidevops/nginx-webpage
         source: pull
         tag: latest
 
     - name: Stop existing container
       ignore_errors: yes
-      shell: docker rm -f nginx-demo
+      shell: docker rm -f nginx-webpage
 
     - name: Run Docker container
       shell: |
         docker run -d \
-        --name nginx-demo \
+        --name nginx-webpage \
         -p 80:80 \
         --restart always \
-        yourdockerhubusername/nginx-demo:latest
+        urmidevops/nginx-webpage:latest
